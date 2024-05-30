@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://rgsdhkq4gje8"]
+
+[ext_resource type="Texture2D" uid="uid://k16ga4c4iulm" path="res://banana.png" id="1_x2ymd"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="2_dm3sa"]
+[ext_resource type="Script" path="res://Button.gd" id="3_46hxg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(554, 406)
+scale = Vector2(2.725, 2.87)
+texture = ExtResource("1_x2ymd")
+script = ExtResource("2_dm3sa")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Akhil Yeduvaka"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1027.0
+offset_top = 41.0
+offset_right = 1110.0
+offset_bottom = 111.0
+text = "Click Me :)"
+script = ExtResource("3_46hxg")
+
+[connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]
